@@ -8,11 +8,12 @@
     padding-top: 210px;
     padding-bottom: 115px;
     display: flex;
-    background-image: url("@img/hero/plane.png"),
-      url("@img/hero/plane.png");
+    background-image: url("@img/hero/Traveller 1.png"),
+      url("@img/hero/plane.png"), url("@img/hero/plane.png");
     background-repeat: no-repeat;
-    background-position: top 200px right,
+    background-position: bottom 0px right, top 200px right,
       top 162px right 465px;
+    background-size: 200px, 137px 95px, 137px 95px;
   }
 
   &__content {
@@ -61,6 +62,12 @@
     background-color: #f1a501;
     cursor: pointer;
     @include adaptiveValue("margin-right", 44, 10);
+    transition: background-color 0.6s ease 0s;
+
+    &:hover,
+    &:focus {
+      background-color: #bb9647;
+    }
   }
 
   &__svg {
@@ -85,14 +92,18 @@
   &__button-play {
     display: flex;
     align-items: center;
+
+    &:hover .hero__svg,
+    &:focus .hero__svg {
+      background-color: #ac5240;
+    }
   }
   @media (min-width: $mobile) {
     background-size: 600px 643px;
 
     &__container {
-      background-image: url("@img/hero/Traveller 1.png"),
-        url("@img/hero/plane.png"),
-        url("@img/hero/plane.png");
+      background-size: 753px 764px, 137px 95px, 137px 95px;
+
       background-position: top 100px right, top 200px right,
         top 162px right 465px;
     }

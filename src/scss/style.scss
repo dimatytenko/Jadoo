@@ -147,6 +147,7 @@ body {
 
 // Подключение стилей общих элементов проекта
 @import "common";
+@import "social-list";
 
 // Подключение стилей отдельных блоков
 @import "header";
@@ -156,3 +157,6 @@ body {
 @import "hero";
 @import "service";
 @import "sell";
+@import "book";
+@import "feedback";
+@import "subscribe";

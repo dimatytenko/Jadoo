@@ -1,0 +1,118 @@
+.subscribe {
+  padding-top: 95px;
+  padding-bottom: 95px;
+  background-image: url("@img/subscribe/decor.png");
+  background-repeat: no-repeat;
+  background-position: right bottom;
+
+  &__container {
+    position: relative;
+    padding-top: 79px;
+    padding-bottom: 78px;
+    border-radius: 129px 20px 20px 20px;
+    background-image: url("@img/subscribe/decor2.png"),
+      url("@img/subscribe/decor3.png");
+    background-repeat: no-repeat;
+    background-position: bottom left 20px, top right;
+    background-color: rgba(223, 215, 249, 0.2);
+  }
+
+  &__title {
+    max-width: 880px;
+    margin: 0 auto;
+    text-align: center;
+    font-weight: 600;
+    font-size: rem(33);
+    line-height: 1.64;
+    margin-bottom: 74px;
+  }
+
+  &__decor {
+    position: absolute;
+    top: -25px;
+    right: -25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: linear-gradient(
+      201.65deg,
+      #747def 10.27%,
+      #5e3be1 100%
+    );
+
+    & svg {
+      width: 35px;
+      height: 30px;
+      fill: #fff;
+    }
+  }
+
+  &__form {
+  }
+}
+.form {
+  &__body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    // justify-content: center;
+  }
+
+  &__item {
+  }
+
+  &__label {
+  }
+
+  &__input {
+    font-family: "Montserrat";
+    font-size: 14px;
+    line-height: math.div(17, 14);
+    color: #39425d;
+    padding: 25px 0px 25px 31px;
+    margin-right: 24px;
+    background: #ffffff;
+    border-radius: 10px;
+    width: 55vw;
+
+    &::placeholder {
+      font-family: "Montserrat";
+      font-size: 14px;
+      line-height: math.div(17, 14);
+      color: #39425d;
+    }
+  }
+
+  &__button {
+    font-family: "Open Sans";
+    font-weight: 600;
+    font-size: 17px;
+    line-height: math.div(23, 17);
+    text-align: center;
+    color: #ffffff;
+    padding: 22px 50px;
+    background-color: #ff946d;
+    border-radius: 10px;
+    transition: background-color 0.6s ease 0s;
+
+    &:hover,
+    &:focus {
+      background-color: #974223;
+    }
+  }
+  @media (min-width: $mobile) {
+    &__input {
+      width: 421px;
+    }
+
+    &__body {
+      gap: unset;
+      flex-direction: row;
+      justify-content: center;
+    }
+  }
+}

@@ -39,9 +39,12 @@
     align-items: center;
     max-width: 267px;
     padding: 0px 43px 45px 43px;
+    transition: background-color 0.6s ease 0s,
+      box-shadow 0.6s ease 0s, border-radius 0.6s ease 0s;
 
     &:hover,
     &:focus {
+      background-color: #fff;
       box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.02),
         0px 64.8148px 46.8519px rgba(0, 0, 0, 0.0151852),
         0px 38.5185px 25.4815px rgba(0, 0, 0, 0.0121481),
@@ -88,9 +91,10 @@
     }
   }
 
-  &__item--decore::after {
+  &__decore::before {
     content: "";
     position: absolute;
+    z-index: -1;
     bottom: -40px;
     left: -40px;
     width: 100px;

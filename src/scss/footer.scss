@@ -1,3 +1,96 @@
-//====================================================================================================
+.footer {
+  &__container {
+    padding-top: 95px;
+    padding-bottom: 80px;
+  }
 
-//====================================================================================================
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__logo {
+    font-weight: 500;
+    font-size: rem(44);
+    line-height: math.div(66, 44);
+    color: #181e4b;
+    margin-bottom: 20px;
+  }
+
+  &__text {
+    font-weight: 500;
+    font-size: rem(13);
+    line-height: 1.24;
+    margin-bottom: 20px;
+  }
+
+  &__social-title {
+    font-weight: 500;
+    font-size: rem(20);
+    line-height: 1.24;
+    letter-spacing: 0.005em;
+    margin-bottom: 16px;
+    text-align: center;
+  }
+
+  &__social-list {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 34px;
+  }
+
+  &__social-item {
+  }
+
+  &__bottom {
+    text-align: center;
+    font-weight: 500;
+    font-size: rem(14);
+    line-height: 1.24;
+  }
+
+  &__spoller-item {
+  }
+
+  &__spoller-title {
+    font-weight: 700;
+    font-size: rem(21);
+    line-height: 1.24;
+    color: #080809;
+    margin-bottom: 34px;
+  }
+
+  &__spoller-body {
+    margin-bottom: 34px;
+  }
+
+  &__spoller-body-item {
+    font-weight: 500;
+    font-size: rem(18);
+    line-height: 1.24;
+  }
+
+  &__spoller-body-item + &__spoller-body-item {
+    margin-top: 12px;
+  }
+
+  @media (min-width: $mobile) {
+    &__spoller {
+      display: flex;
+      gap: 73px;
+    }
+  }
+
+  @media (min-width: $tablet) {
+    &__content {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    &__logo-box {
+      width: 207px;
+    }
+  }
+}

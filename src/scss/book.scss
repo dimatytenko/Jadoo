@@ -1,0 +1,244 @@
+.book {
+  &__container {
+    margin-bottom: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__content {
+    max-width: 510px;
+    margin-bottom: rem(40);
+  }
+
+  &__top {
+    font-weight: 600;
+    font-size: rem(18);
+    line-height: math.div(27, 18);
+    margin-bottom: 15px;
+  }
+
+  &__title {
+    font-family: "Volkhov";
+    font-weight: 700;
+    @include adaptiveValue("font-size", 50, 20);
+    line-height: math.div(64, 50);
+    text-transform: capitalize;
+    color: #14183e;
+    margin-bottom: 30px;
+  }
+
+  &__list {
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+  }
+
+  &__item + &__item {
+    margin-top: 48px;
+  }
+
+  &__svg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 48px;
+    height: 48px;
+    background-color: #f0bb1f;
+    border-radius: 13px;
+    margin-right: 20px;
+
+    & svg {
+      width: 22px;
+      height: 22px;
+      fill: #fff;
+    }
+  }
+
+  &__svg--mod-one {
+    background-color: #f15a2b;
+  }
+
+  &__svg--mod-two {
+    background-color: #006380;
+  }
+  &__item-content {
+    max-width: 395px;
+  }
+
+  &__item-content-top {
+    font-weight: 700;
+    line-height: 1.24;
+    margin-bottom: 5px;
+  }
+
+  &__item-content-bottom {
+    line-height: 1.24;
+  }
+
+  &__box {
+    position: relative;
+  }
+
+  &__card-blur {
+    position: absolute;
+    z-index: -1;
+    left: 60px;
+    top: -60px;
+    width: 354px;
+    height: 367px;
+    border-radius: 50px;
+    background-color: #59b1e6;
+    opacity: 0.8;
+    filter: blur(150px);
+  }
+
+  &__card {
+    padding: 20px 25px;
+    max-width: 370px;
+    height: 400px;
+    background-color: #ffffff;
+    box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.02),
+      0px 64.8148px 46.8519px rgba(0, 0, 0, 0.0151852),
+      0px 38.5185px 25.4815px rgba(0, 0, 0, 0.0121481),
+      0px 20px 13px rgba(0, 0, 0, 0.01),
+      0px 8.14815px 6.51852px rgba(0, 0, 0, 0.00785185),
+      0px 1.85185px 3.14815px rgba(0, 0, 0, 0.00481481);
+    border-radius: 26px;
+  }
+
+  &__img {
+    max-width: 321px;
+    height: 161px;
+    background-color: transparent;
+    border-radius: 26px;
+    margin-bottom: 25px;
+
+    & img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__card-title {
+    font-weight: 500;
+    font-size: rem(18);
+    line-height: 1.24;
+    letter-spacing: 0.015em;
+    color: #080809;
+    margin-bottom: 13px;
+  }
+
+  &__date {
+    display: inline-block;
+    font-weight: 500;
+    line-height: 1.24;
+    letter-spacing: -0.005em;
+    color: #84829a;
+
+    &::after {
+      content: "";
+      width: 16px;
+      height: 0;
+      background: #84829a;
+      border: 1px solid #84829a;
+      transform: rotate(90deg);
+      margin-left: 5px;
+    }
+  }
+
+  &__desc {
+    display: inline-block;
+    font-weight: 500;
+    line-height: 1.24;
+    letter-spacing: -0.005em;
+    color: #84829a;
+    margin-left: 10px;
+    margin-bottom: 20px;
+  }
+
+  &__card-list {
+    display: flex;
+    margin-bottom: 30px;
+  }
+
+  &__card-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: #f5f5f5;
+    cursor: pointer;
+
+    & svg {
+      width: 14px;
+      height: 14px;
+      fill: #9ca0b0;
+      transition: fill 0.6s ease 0s;
+    }
+
+    &:hover svg,
+    &:focus svg {
+      fill: rgb(238, 38, 24);
+    }
+  }
+
+  &__card-item + &__card-item {
+    margin-left: 13px;
+  }
+
+  &__card-box-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__card-text-bottom {
+    font-weight: 500;
+    line-height: 1.24;
+    letter-spacing: -0.02em;
+    color: #84829a;
+    cursor: pointer;
+
+    & svg {
+      width: 16px;
+      height: 16px;
+      fill: #84829a;
+      transition: fill 0.6s ease 0s;
+    }
+
+    &:hover svg,
+    &:focus svg {
+      fill: rgb(238, 38, 24);
+    }
+  }
+
+  &__svg-heart {
+    width: 20px;
+    height: 19px;
+    fill: #4152ca;
+    cursor: pointer;
+
+    transition: fill 0.6s ease 0s;
+
+    &:hover,
+    &:focus {
+      fill: rgb(238, 38, 24);
+    }
+  }
+
+  @media (min-width: $mobile) {
+    &__container {
+      flex-direction: row;
+    }
+
+    &__content {
+      margin-bottom: 0;
+      @include adaptiveValue("margin-right", 143, 5);
+    }
+  }
+}

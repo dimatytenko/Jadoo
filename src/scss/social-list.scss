@@ -1,0 +1,51 @@
+.social-list {
+  display: flex;
+  gap: 25px;
+  margin-bottom: 25px;
+  &__svg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 41px;
+    height: 41px;
+    border-radius: 50%;
+    background-color: #fff;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: background 0.6s ease 0s,
+      box-shadow 0.6s ease 0s;
+
+    &:hover,
+    &:focus,
+    &:focus-within {
+      background: conic-gradient(
+        from 180deg at 50% 50%,
+        #b8d2f1 0deg,
+        #f289aa 60deg,
+        #c68bf0 106.09deg,
+        #d164da 153.75deg,
+        #c963e8 221.25deg,
+        #bfc2e8 258.75deg,
+        #ffc999 288.75deg,
+        #d0d8c9 315deg,
+        #bad0f1 334.13deg,
+        #ced8cb 358.97deg,
+        rgba(255, 255, 255, 0) 360deg
+      );
+      box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+
+      &:hover svg,
+      &:focus svg,
+      &:focus-within svg {
+        fill: #fff;
+      }
+    }
+  }
+
+  & svg {
+    width: 16px;
+    height: 16px;
+    fill: #080809;
+    transition: fill 0.6s ease 0s;
+  }
+}
