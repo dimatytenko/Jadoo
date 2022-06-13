@@ -1,0 +1,137 @@
+.hero {
+  background-image: url("@img/hero/Back-Decore.png");
+  background-repeat: no-repeat;
+  background-position: top right;
+  background-size: 320px 513px;
+
+  &__container {
+    padding-top: 210px;
+    padding-bottom: 115px;
+    display: flex;
+    background-image: url("@img/hero/plane.png"),
+      url("@img/hero/plane.png");
+    background-repeat: no-repeat;
+    background-position: top 200px right,
+      top 162px right 465px;
+  }
+
+  &__content {
+    max-width: 555px;
+  }
+
+  &__slogan {
+    font-weight: 700;
+    font-size: rem(14);
+    line-height: math.div(30, 20);
+    text-transform: uppercase;
+    color: #df6951;
+    margin-bottom: 40px;
+  }
+
+  &__title {
+    font-family: "Volkhov";
+    font-weight: 700;
+    font-size: rem(36);
+    letter-spacing: -0.04em;
+    color: #181e4b;
+    margin-bottom: 30px;
+    background-image: url("@img/hero/Decore.png");
+    background-repeat: no-repeat;
+  }
+
+  &__text {
+    font-size: rem(14);
+    font-weight: 500;
+    line-height: 1.88;
+    color: #5e6282;
+    margin-bottom: 34px;
+  }
+
+  &__box-button {
+    display: flex;
+  }
+
+  &__button {
+    font-size: rem(14);
+    line-height: math.div(23, 18);
+    color: #fff;
+    padding: 10px 20px;
+    box-shadow: 0px 20px 35px rgba(241, 165, 1, 0.15);
+    border-radius: 10px;
+    background-color: #f1a501;
+    cursor: pointer;
+    @include adaptiveValue("margin-right", 44, 10);
+  }
+
+  &__svg {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #df6951;
+    margin-right: 20px;
+
+    & svg {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 15px;
+      height: 15px;
+      transform: translate(-50%, -50%);
+      fill: #fff;
+    }
+  }
+
+  &__button-play {
+    display: flex;
+    align-items: center;
+  }
+  @media (min-width: $mobile) {
+    background-size: 600px 643px;
+
+    &__container {
+      background-image: url("@img/hero/Traveller 1.png"),
+        url("@img/hero/plane.png"),
+        url("@img/hero/plane.png");
+      background-position: top 100px right, top 200px right,
+        top 162px right 465px;
+    }
+
+    &__slogan {
+      font-size: rem(20);
+    }
+
+    &__title {
+      font-size: rem(84);
+      background-size: 385px;
+      background-position: 245px 62px;
+    }
+
+    &__text {
+      font-size: rem(16);
+    }
+
+    &__button {
+      font-size: rem(18);
+      padding: 18px 26px;
+    }
+
+    &__svg {
+      position: relative;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: #df6951;
+      margin-right: 20px;
+
+      & svg {
+        top: 50%;
+        left: 50%;
+      }
+    }
+  }
+
+  @media (min-width: $tablet) {
+    background-size: 700px 713px;
+  }
+}
