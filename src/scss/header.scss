@@ -127,6 +127,7 @@
     color: #212832;
     padding: 8px 12px;
     border-radius: 5px;
+    border: 1px solid transparent;
 
     &:hover,
     &:focus {
@@ -146,8 +147,9 @@
     font-weight: 600;
     line-height: math.div(22, 17);
     color: #212832;
-    padding: 10px 15px;
+    padding: 8px 12px;
     border-radius: 5px;
+    border: 1px solid transparent;
 
     &:hover,
     &:focus {
@@ -206,23 +208,4 @@
       @include adaptiveValue("matgin-left", 20, 10);
     }
   }
-}
-
-.menu {
-  &__icon {
-  }
-
-  &__body {
-  }
-
-  &__list {
-  }
-
-  &__item {
-  }
-
-  &__link {
-  }
-}
-.icon-menu {
 }
