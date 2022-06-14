@@ -22,7 +22,7 @@
     margin: 0 auto;
     text-align: center;
     font-weight: 600;
-    font-size: rem(33);
+    @include adaptiveValue("font-size", 33, 18);
     line-height: 1.64;
     margin-bottom: 74px;
   }
@@ -74,10 +74,10 @@
     line-height: math.div(17, 14);
     color: #39425d;
     padding: 25px 0px 25px 31px;
-    margin-right: 24px;
+
     background: #ffffff;
     border-radius: 10px;
-    width: 55vw;
+    width: 85vw;
 
     &::placeholder {
       font-family: "Montserrat";
@@ -107,6 +107,7 @@
   @media (min-width: $mobile) {
     &__input {
       width: 421px;
+      margin-right: 24px;
     }
 
     &__body {
